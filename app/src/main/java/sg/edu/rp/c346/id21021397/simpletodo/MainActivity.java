@@ -3,6 +3,7 @@ package sg.edu.rp.c346.id21021397.simpletodo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -49,12 +50,16 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         btnAdd.setEnabled(true);
                         btnDelete.setEnabled(false);
+                        etTask.setInputType(InputType.TYPE_CLASS_TEXT);
                         etTask.setHint(R.string.enter_task);
+                        etTask.setText("");
                         break;
                     case 1:
                         btnAdd.setEnabled(false);
                         btnDelete.setEnabled(true);
+                        etTask.setInputType(InputType.TYPE_CLASS_NUMBER);
                         etTask.setHint(R.string.remove_task);
+                        etTask.setText("");
                         break;
                 }
             }
